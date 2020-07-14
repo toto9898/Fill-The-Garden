@@ -11,3 +11,5 @@ The shapes may be:
 * Hexagon  
 * Ellipse
 * Circle
+
+**Note: You can copy the coordinates of the centers in https://www.desmos.com/calculator to visualize them better.**
