@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Ellipse.h" />
+    <ClInclude Include="Garden.h" />
     <ClInclude Include="Hexagon.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Triangle.h" />
@@ -29,6 +30,7 @@
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="Garden.cpp" />
     <ClCompile Include="Hexagon.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Shape.cpp" />

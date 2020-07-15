@@ -10,6 +10,8 @@ public:
 
     double Radius();
 
+    Shape* clone() const override;
+
 private:
     double radius;
 };

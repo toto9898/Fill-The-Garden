@@ -12,6 +12,8 @@ public:
     std::vector<Shape*> GetAdjecentShapes() const override;
     bool IsInRectangle(double rectWidth, double rectHeight) const;
 
+    Shape* clone() const override;
+
 private:
     double sideSize;
 };

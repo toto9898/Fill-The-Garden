@@ -1,14 +1,16 @@
 #include "Ellipse.h"
 
-Ellipse::Ellipse(double majorAxis, double minorAxis) :
-	Shape((majorAxis * minorAxis * PI) / 4, { majorAxis / 2, minorAxis / 2}),
+Ellipse::Ellipse(double majorAxis, double minorAxis, Type type) :
+	Shape((majorAxis * minorAxis * PI) / 4, 
+		type, { majorAxis / 2, 
+		minorAxis / 2}),
 	majorAxis(majorAxis),
 	minorAxis(minorAxis)
 {
 }
 
-Ellipse::Ellipse(double majorAxis, double minorAxis, Vector2 center) :
-	Shape((majorAxis * minorAxis * PI) / 4, center),
+Ellipse::Ellipse(double majorAxis, double minorAxis, Vector2 center, Type type) :
+	Shape((majorAxis * minorAxis * PI) / 4, type, center),
 	majorAxis(majorAxis),
 	minorAxis(minorAxis)
 {
@@ -49,4 +51,9 @@ bool Ellipse::IsInRectangle(double rectWidth, double rectHeight) const
 		return true;
 
 	return false;
+}
+
+Shape* Ellipse::clone() const
+{
+	return new Ellipse(*this);
 }
