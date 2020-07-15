@@ -127,9 +127,14 @@ void Garden::Copy(const Garden& from)
 
 void Garden::Free()
 {
+	width = 1;
+	height = 1;
+
 	for (Shape*& shape : shapes)
 	{
 		delete shape;
 		shape = nullptr;
 	}
+
+	shapes.clear();
 }
