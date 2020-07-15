@@ -1,14 +1,14 @@
 #include "Triangle.h"
 
 Triangle::Triangle(const double sideSize, bool flippedVertically) :
-	Shape((sideSize* sideSize* SQRT3) / 4, TRIANGLE, { sideSize / 2, (SQRT3 * sideSize) / 6 }),
+	Shape((sideSize* sideSize* SQRT3) / 4, { sideSize / 2, (SQRT3 * sideSize) / 6 }),
 	sideSize(sideSize),
 	flippedVertically(flippedVertically)
 {
 }
 
 Triangle::Triangle(const double sideSize, const Vector2 center, bool flippedVertically) :
-	Shape((sideSize* sideSize* SQRT3) / 4, TRIANGLE, center),
+	Shape((sideSize* sideSize* SQRT3) / 4, center),
 	sideSize(sideSize),
 	flippedVertically(flippedVertically)
 {	

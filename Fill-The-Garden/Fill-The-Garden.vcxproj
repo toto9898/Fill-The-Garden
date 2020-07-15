@@ -24,6 +24,7 @@
     <ClInclude Include="Garden.h" />
     <ClInclude Include="Hexagon.h" />
     <ClInclude Include="Shape.h" />
+    <ClInclude Include="ShapeFactory.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vector2.h" />
   </ItemGroup>
@@ -34,6 +35,7 @@
     <ClCompile Include="Hexagon.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="ShapeFactory.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vector2.cpp" />
   </ItemGroup>

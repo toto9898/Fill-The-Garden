@@ -1,16 +1,14 @@
 #include "Ellipse.h"
 
-Ellipse::Ellipse(double majorAxis, double minorAxis, Type type) :
-	Shape((majorAxis * minorAxis * PI) / 4, 
-		type, { majorAxis / 2, 
-		minorAxis / 2}),
+Ellipse::Ellipse(double majorAxis, double minorAxis) :
+	Shape((majorAxis * minorAxis * PI) / 4, { majorAxis / 2, minorAxis / 2}),
 	majorAxis(majorAxis),
 	minorAxis(minorAxis)
 {
 }
 
-Ellipse::Ellipse(double majorAxis, double minorAxis, Vector2 center, Type type) :
-	Shape((majorAxis * minorAxis * PI) / 4, type, center),
+Ellipse::Ellipse(double majorAxis, double minorAxis, Vector2 center) :
+	Shape((majorAxis * minorAxis * PI) / 4, center),
 	majorAxis(majorAxis),
 	minorAxis(minorAxis)
 {

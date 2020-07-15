@@ -28,13 +28,13 @@ bool Initialize(Vector2& rect, double& angle, int& type, double& size1, double s
 	if (!PrintRead("Enter angle: ", angle))	return false;
 
 	std::cout << "Figure types:\n";
-	for (int i = 0; i < Shape::NUM_OF_TYPES; ++i)
-		std::cout << "\t" << i << ": " << Shape::NAMES[i] << "\n";
+	for (int i = 0; i < NUM_OF_TYPES; ++i)
+		std::cout << "\t" << i << ": " << SHAPE_NAMES[i] << "\n";
 
 	if (!PrintRead("Enter figure type: ", type)) return false;
 	if (!PrintRead("Enter figure dimension: ", size1)) return false;
 
-	if (type == Shape::ELLIPSE &&
+	if (type == ELLIPSE &&
 		!PrintRead("Enter second figure dimension: ", size2))
 		return false;
 
@@ -52,7 +52,7 @@ int main()
 	std::cout << "\nTry again.\n";
 
 	Garden garden(rect.x, rect.y);
-	garden.Fill((Shape::Type)type, size, size2);
+	garden.Fill((ShapeType)type, size, size2);
 	garden.Rotate(angle, true);
 	garden.PrintPlantsCount();
 	garden.PrintPlantsCenters();

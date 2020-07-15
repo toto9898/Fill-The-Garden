@@ -4,29 +4,10 @@
 #include "Ellipse.h"
 #include "Circle.h"
 
-const char* const Shape::NAMES[NUM_OF_TYPES] = { "triangle", "hexagon", "ellipse", "circle" };
 
-Shape* Shape::Create(Type type, double size1, double size2)
-{
-	switch (type)
-	{
-	case Shape::TRIANGLE:
-		return new Triangle(size1);
-	case Shape::HEXAGON:
-		return new Hexagon(size1);
-	case Shape::ELLIPSE:
-		return new Ellipse(size1, size2);
-	case Shape::CIRCLE:
-		return new Circle(size1);
-	default:
-		return nullptr;
-	}
-}
-
-Shape::Shape(double area, Type type, const Vector2 center) :
+Shape::Shape(double area, const Vector2 center) :
 	center(center),
-	area(area),
-	type(type)
+	area(area)
 {
 }
 
@@ -54,9 +35,4 @@ Shape& Shape::Rotate(double angle, bool inDegrees)
 double Shape::Area() const
 {
 	return area;
-}
-
-Shape::Type Shape::GetType() const
-{
-	return type;
 }

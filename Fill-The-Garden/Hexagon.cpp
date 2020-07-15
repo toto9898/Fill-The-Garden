@@ -1,13 +1,13 @@
 #include "Hexagon.h"
 
 Hexagon::Hexagon(const double sideSize) :
-	Shape((3 * SQRT3 * sideSize * sideSize) / 2, HEXAGON, { (sideSize * SQRT3) / 2, sideSize }),
+	Shape((3 * SQRT3 * sideSize * sideSize) / 2, { (sideSize * SQRT3) / 2, sideSize }),
 	sideSize(sideSize)
 {
 }
 
 Hexagon::Hexagon(const double sideSize, const Vector2 center) :
-	Shape((3 * SQRT3 * sideSize * sideSize) / 2, HEXAGON, center),
+	Shape((3 * SQRT3 * sideSize * sideSize) / 2, center),
 	sideSize(sideSize)
 {
 }

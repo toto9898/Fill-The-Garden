@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Shape.h"
+#include "ShapeFactory.h"
 
 
 class Garden
@@ -11,10 +12,10 @@ public:
 	Garden& operator=(const Garden& rhs);
 	~Garden();
 
-	void Fill(Shape::Type type, double size1, double size2 = 1);
+	void Fill(ShapeType type, double size1, double size2 = 1);
 	void Rotate(double angle, bool inDegrees = false);
 
-	Shape::Type PlantsCrownType() const;
+	ShapeType PlantsCrownType() const;
 	void PrintPlantsCount() const;
 	void PrintPlantsCenters() const;
 	void PrintAreaCovered() const;
@@ -25,7 +26,9 @@ private:
 private:
 	double width;
 	double height;
-	Shape::Type type;
+	ShapeType type;
 	std::vector<Shape*> shapes;
+
+	ShapeFactory factory;
 };
 

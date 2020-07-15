@@ -7,7 +7,7 @@
 Garden::Garden(double width, double height) :
 	width(width),
 	height(height),
-	type(Shape::INVALID)
+	type(INVALID)
 {
 }
 
@@ -31,12 +31,12 @@ Garden::~Garden()
 	Free();
 }
 
-void Garden::Fill(Shape::Type type, double size1, double size2)
+void Garden::Fill(ShapeType type, double size1, double size2)
 {
 	Free();
 	shapes.clear();
 
-	shapes.push_back(Shape::Create(type, size1, size2));
+	shapes.push_back(factory.Create(type, size1, size2));
 	if (!shapes[0])
 		return;
 
@@ -85,11 +85,9 @@ void Garden::Rotate(double angle, bool inDegrees)
 		shape->Rotate(angle, inDegrees);
 }
 
-Shape::Type Garden::PlantsCrownType() const
+ShapeType Garden::PlantsCrownType() const
 {
-	if (!shapes.empty())
-		return shapes[0]->GetType();
-	return Shape::INVALID;
+	return type;
 }
 
 void Garden::PrintPlantsCount() const

@@ -4,8 +4,8 @@ class Ellipse :
     public Shape
 {
 public:
-    Ellipse(double majorAxis, double minorAxis, Type type = ELLIPSE);
-    Ellipse(double majorAxis, double minorAxis, Vector2 center, Type type = ELLIPSE);
+    Ellipse(double majorAxis, double minorAxis);
+    Ellipse(double majorAxis, double minorAxis, Vector2 center);
 
     double MajorAxis() const;
     double MinorAxis() const;
