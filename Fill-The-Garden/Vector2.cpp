@@ -32,7 +32,7 @@ Vector2& Vector2::operator-=(const Vector2& rhs)
 Vector2 Vector2::operator-(const Vector2& rhs) const
 {
 	Vector2 cpy(*this);
-	return Vector2(cpy -= rhs);
+	return cpy -= rhs;
 }
 
 Vector2& Vector2::operator*=(const Vector2& rhs)
@@ -45,7 +45,7 @@ Vector2& Vector2::operator*=(const Vector2& rhs)
 Vector2 Vector2::operator*(const Vector2& rhs) const
 {
 	Vector2 cpy(*this);
-	return Vector2(cpy *= rhs);
+	return cpy *= rhs;
 }
 
 Vector2& Vector2::operator/=(const Vector2& rhs)
@@ -60,7 +60,7 @@ Vector2& Vector2::operator/=(const Vector2& rhs)
 Vector2 Vector2::operator/(const Vector2& rhs) const
 {
 	Vector2 cpy(*this);
-	return Vector2(cpy /= rhs);
+	return cpy /= rhs;
 }
 
 Vector2& Vector2::operator=(const Vector2& rhs)
