@@ -12,6 +12,10 @@ Circle::Circle(double radius, Vector2 center) :
 {
 }
 
+Circle::~Circle()
+{
+}
+
 double Circle::Radius()
 {
 	return radius;

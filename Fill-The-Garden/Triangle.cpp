@@ -14,6 +14,10 @@ Triangle::Triangle(const double sideSize, const Vector2 center, bool flippedVert
 {	
 }
 
+Triangle::~Triangle()
+{
+}
+
 double Triangle::SideSize() const
 {
 	return sideSize;

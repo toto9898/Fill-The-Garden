@@ -7,10 +7,11 @@ class Circle :
 public:
     Circle(double radius);
     Circle(double radius, Vector2 center);
+    virtual ~Circle();
 
     double Radius();
 
-    Shape* clone() const override;
+    virtual Shape* clone() const override;
 
 private:
     double radius;

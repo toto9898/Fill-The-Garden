@@ -7,12 +7,13 @@ class Hexagon :
 public:
     Hexagon(const double sideSize);
     Hexagon(const double sideSize, const Vector2 center);
+    virtual ~Hexagon();
 
     double SideSize() const;
-    std::vector<Shape*> GetAdjecentShapes() const override;
-    bool IsInRectangle(double rectWidth, double rectHeight) const;
+    virtual std::vector<Shape*> GetAdjecentShapes() const override;
+    virtual bool IsInRectangle(double rectWidth, double rectHeight) const override;
 
-    Shape* clone() const override;
+    virtual Shape* clone() const override;
 
 private:
     double sideSize;

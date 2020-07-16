@@ -7,12 +7,13 @@ class Triangle :
 public:
     Triangle(const double sideSize, bool flippedVertically = false);
     Triangle(const double sideSize, const Vector2 center, bool flippedVertically = false);
+    virtual ~Triangle();
 
     double SideSize() const;
-    std::vector<Shape*> GetAdjecentShapes() const override;
-    bool IsInRectangle(double rectWidth, double rectHeight) const;
+    virtual std::vector<Shape*> GetAdjecentShapes() const override;
+    virtual bool IsInRectangle(double rectWidth, double rectHeight) const override;
 
-    Shape* clone() const override;
+    virtual Shape* clone() const override;
 
 private:
     double sideSize;

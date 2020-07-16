@@ -14,6 +14,10 @@ Ellipse::Ellipse(double majorAxis, double minorAxis, Vector2 center) :
 {
 }
 
+Ellipse::~Ellipse()
+{
+}
+
 double Ellipse::MajorAxis() const
 {
 	return majorAxis;

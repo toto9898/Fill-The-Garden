@@ -12,6 +12,10 @@ Hexagon::Hexagon(const double sideSize, const Vector2 center) :
 {
 }
 
+Hexagon::~Hexagon()
+{
+}
+
 double Hexagon::SideSize() const
 {
 	return sideSize;
